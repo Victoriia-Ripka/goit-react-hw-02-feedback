@@ -11,31 +11,21 @@ export class Counter extends React.Component {
         bad: 0,
     }
 
-    // onLeaveFeedback = e => {
-    //     switch(e.target.textContent){
-    //         case 'Good' : 
-    //             this.setState(prevState => {
-    //             return {good: prevState.good + 1}
-    //             })
-    //             break
-    //         case 'Neutral': 
-    //             this.setState(prevState => {
-    //             return {neutral: prevState.good + 1}
-    //             })
-    //             break        
-    //         case 'Bad' : 
-    //             this.setState(prevState => {
-    //             return {bad: prevState.good + 1}
-    //             })
-    //             break
-    //     }
-    // }
-
     onLeaveFeedback = e => {
-        this.setState(prevState => {
-        return {good: prevState.good + 1}})
+        if(e.target.textContent === "Good"){
+            this.setState(prevState => {
+            return {good: prevState.good + 1}})
+        }
+        else if(e.target.textContent === "Neutral"){
+            this.setState(prevState => {
+            return {neutral: prevState.neutral + 1}})
+        }
+        else{
+            this.setState(prevState => {
+            return {bad: prevState.bad + 1}})
+        }
+        
     }
-
 
     countTotalFeedback = e => {
         return this.state.good + this.state.neutral + this.state.bad
