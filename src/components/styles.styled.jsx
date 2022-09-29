@@ -19,11 +19,18 @@ export const Title = styled.h2`
 `
 
 export const Btn = styled.button`
-    margin: 10px;
+    margin: 0 10px 0 0;
     padding: 5px;
     border-radius: 4px;
     background-color: #FEC8D8;
     font-weight: 500;
     font-size: 16px;
     width: 100px;
+`
+
+export const List = styled.ul`
+display: flex;
+    list-style-type: none;
+    margin: 10px;
+    padding: 0;
 `
