@@ -25,6 +25,7 @@ export const Btn = styled.button`
     background-color: #FEC8D8;
     font-weight: 500;
     font-size: 16px;
+    text-transform: capitalize;
     width: 100px;
 `
 
