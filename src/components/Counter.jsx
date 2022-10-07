@@ -33,7 +33,7 @@ export class Counter extends React.Component {
   };
 
   render() {
-    const options = ['good', 'neutral', 'bad'];
+    const options = Object.keys(this.state);
 
     return (
       <SectionStyled>
